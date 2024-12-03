@@ -266,7 +266,7 @@ func stringifyLineBuf(dict *dictionary, line int, in []tokenID, ld *dictionary, 
 
 	for _, re := range ignorableTexts {
 		if re.MatchString(out) {
-			return nil, &Match{Name: "Copyright", MatchType: "Copyright", Confidence: 1.0, StartLine: line, EndLine: line}
+			return nil, &Match{Name: out, MatchType: "Copyright", Confidence: 1.0, StartLine: line, EndLine: line}
 		}
 	}
 
